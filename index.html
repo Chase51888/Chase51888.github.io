@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chase's Blog</title>
+    <style>
+        /* 全局样式 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: linear-gradient(135deg, #c850c0, #4158d0); /* 蓝色紫色渐变背景 */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 60px; /* 为底部留空间，避免被footer遮挡 */
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 个人信息区域 */
+        .profile {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px; /* 圆角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out forwards; /* 加入淡入动画 */
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .profile-info p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* 按钮样式 */
+        .buttons {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .buttons a {
+            background-color: #4158d0;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .buttons a:hover {
+            background-color: #c850c0;
+        }
+
+        /* 两栏内容区域 */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 40px; /* 加大两栏之间的间距 */
+        }
+
+        .content-column {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px; /* 圆角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 48%;
+            animation: fadeIn 1.5s ease-out forwards; /* 加入淡入动画 */
+        }
+
+        .content-column:nth-child(1) {
+            animation-delay: 0.3s; /* 左边栏动画延迟 */
+        }
+
+        .content-column:nth-child(2) {
+            animation-delay: 0.6s; /* 右边栏动画延迟 */
+        }
+
+        /* 底部信息栏 */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            font-size: 0.9em;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 个人信息区 -->
+    <div class="profile">
+        <img src="https://via.placeholder.com/150" alt="Your Avatar">
+        <div class="profile-info">
+            <h1>Chase</h1>
+            <p>I am currently pursuing a PhD in Computer Science. My research interests include software engineering, programming languages, and machine learning systems.</p>
+            <div class="buttons">
+                <a href="https://github.com/Chase51888" target="_blank">GitHub</a>
+                <a href="mailto:caprixinze2024@gmail.com">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content">
+        <div class="content-column">
+            <h2>Current Research</h2>
+            <p>Basic Image processing in CV</p>
+			<P>Basic AI</p>
+        </div>
+        <div class="content-column">
+            <h2>Current Achievements</h2>
+            <p>1 paper(1)</p>
+			<p>2 paper(4)</p>
+			<p>1 invention patent</p>
+        </div>
+    </div>
+</div>
+
+<!-- 底部栏 -->
+<footer>
+    <p>© 2024 | Chase</p>
+</footer>
+
+</body>
+</html>
